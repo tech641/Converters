@@ -1,0 +1,32 @@
+.page {
+    display: grid;
+    gap: 16px;
+}
+
+.page-header h2 {
+    margin: 0;
+    color: #0f172a;
+}
+
+.page-header .muted {
+    color: #6b7280;
+}
+
+.upload-box {
+    padding: 18px;
+    background: #ffffff;
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+}
+
+.placeholder {
+    display: grid;
+    place-items: center;
+    height: 220px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    color: #6b7280;
+    font-style: italic;
+    box-shadow: 0 6px 18px rgba(17, 24, 39, .04);
+}
