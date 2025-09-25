@@ -1,0 +1,110 @@
+.sidebar {
+  position: sticky;     /* <— key */
+  top: 0;               /* stick to the top edge */
+  align-self: start;    /* ensure sticky works inside CSS grid */
+  height: 100dvh;       /* full viewport height */
+  overflow: auto;       /* sidebar items scroll if they overflow */
+  z-index: 20;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 14px 12px;
+  gap: 10px;
+  transition: padding 200ms ease;
+}
+
+.app-shell.is-closed .sidebar {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.collapsed .nav-title,
+.sidebar.collapsed .brand-title,
+.sidebar.collapsed .brand-wordmark {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease;
+}
+
+.sidebar-brand {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.brand-wordmark {
+  /* If 'Pacifico' loads, it will look like the screenshot.
+     Otherwise we imitate with heavy italic. */
+  font-family: "Pacifico", ui-rounded, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 28px;
+  line-height: 1;
+  color: #3567e5;           /* friendly blue like the sample */
+  text-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  white-space: nowrap;
+  transition: opacity 160ms ease, transform 220ms ease;
+  will-change: transform;
+}
+
+.brand-logo {
+  transition: height 220ms ease, transform 220ms ease; /* smooth logo resize */
+}
+
+.brand-logo.large { height: 64px; width: auto; }  /* bigger logo when expanded */
+.brand-logo.small { height: 28px; width: auto; }
+
+.sidebar:not(.collapsed) .brand-wordmark {
+  transform: translateY(0);
+}
+
+
+.brand-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0f172a;
+  transition: opacity 160ms ease;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #6b7280;
+  padding: 6px 8px 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #111827;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.nav-item:hover {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.nav-item.active {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  color: #1e3a8a;
+}
+
+.nav-icon { width: 20px; display: grid; place-items: center; }
+
+/* removed .sidebar-foot and .hint */
