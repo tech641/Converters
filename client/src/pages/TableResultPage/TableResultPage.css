@@ -1,0 +1,36 @@
+/* Page layout */
+.result-page { display: grid; gap: 16px; }
+.result-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+.result-head h2 { margin: 0; color: #0f172a; }
+.result-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 12px; border-radius: 10px; border: 1px solid #e5e7eb;
+  background: #fff; color: #111827; cursor: pointer; white-space: nowrap;
+}
+.btn:hover { background: #f9fafb; }
+.btn.primary { background: #1d4ed8; border-color: #1e40af; color: #fff;  }
+.btn-sm {
+  padding: 6px 10px;     /* smaller padding */
+  font-size: 12px;       /* smaller text */
+  border-radius: 8px;    /* slightly tighter */
+  gap: 6px;
+}
+.muted { color: #6b7280; }
+
+/* Table styles (same as TableResult.css) */
+.tbl-wrap { overflow: auto; border: 1px solid #e5e7eb; border-radius: 12px; }
+.tbl { width: 100%; border-collapse: collapse; background: #fff; }
+.tbl th, .tbl td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; white-space: nowrap; }
+.tbl thead th { position: sticky; top: 0; background: #f9fafb; text-align: left; font-size: 12px; color: #475569; }
+.tbl tbody tr:hover { background: #fafafa; }
