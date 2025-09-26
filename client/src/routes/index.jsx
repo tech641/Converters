@@ -5,12 +5,12 @@ import EmiratesId from "../pages/EmiratesId/EmiratesId";
 import Passport from "../pages/Passport/Passport";
 import Visa from "../pages/Visa/Visa";
 import TradeLiscense from "../pages/TradeLiscense/TradeLiscense";
-import TableResultPage from "../pages/TableResultPage/TableResultPage";
+import Project from "../pages/Project/Project";
 import NotFound from "../pages/NotFound/NotFound";
 
 // Only the Converts submenu pages are routed.
 const routes = [
-    { path: "/", element: BankStatement }, // default to Bank Statement
+    { path: "/", element: Project }, // default to Bank Statement
     { path: "/converts/bank-statement", element: BankStatement },
     { path: "/converts/bank-statement/tableresult", element: TableResultPage },
     { path: "/converts/invoices", element: Invoices },
