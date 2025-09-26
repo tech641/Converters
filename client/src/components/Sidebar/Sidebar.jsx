@@ -24,7 +24,7 @@ export default function Sidebar({ collapsed }) {
       <div className="nav-group">
         {!collapsed && <div className="nav-title">Projects</div>}
         <NavItem
-          to="/converts/Projects"
+          to="/"
           icon={<FolderKanban size={18} />}
           text="All Projects"
           collapsed={collapsed}
