@@ -6,6 +6,7 @@ import Passport from "../pages/Passport/Passport";
 import Visa from "../pages/Visa/Visa";
 import TradeLiscense from "../pages/TradeLiscense/TradeLiscense";
 import Project from "../pages/Project/Project";
+import TableResultPage from "../pages/TableResultPage/TableResultPage"
 import NotFound from "../pages/NotFound/NotFound";
 
 // Only the Converts submenu pages are routed.
